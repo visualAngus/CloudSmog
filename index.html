@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DATACENTER IMPACT MAP</title>
+
+  <!-- Mapbox GL JS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+
+  <!-- Fonts : Orbitron (display) + Share Tech Mono (data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== SCAN LINE OVERLAY ===== -->
+  <!-- <div class="scanlines" aria-hidden="true"></div> -->
+
+  <!-- ===== MAP ===== -->
+  <div id="map"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="hud-header">
+    <div class="header-left">
+      <div class="logo-mark" aria-hidden="true">◈</div>
+      <div class="header-titles">
+        <h1>CLOUD<span class="accent">SMOG</span></h1>
+        <p class="header-sub">EMPREINTE ENVIRONNEMENTALE MONDIALE</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <div class="view-mode-toggle" title="Mode d'affichage">
+        <button class="mode-btn" id="btn-dc-mode" title="Vue Datacenters">⬤</button>
+        <button class="mode-btn active" id="btn-region-mode" title="Vue Régions">◎</button>
+      </div>
+<button id="btn-expert" class="hud-btn-small" title="Activer le mode expert avec filtres avancés">⚙ Filtres avancés</button>
+      <button id="btn-compare" class="hud-btn-small hidden" title="Comparer les régions du monde">&#8801; Comparer les régions</button>
+      <button id="btn-map-theme" class="hud-btn-small" title="Changer le thème de la carte">☀</button>
+      <button id="btn-tour" class="hud-btn-small hud-btn-tour" title="Visite guidée">?</button>
+    </div>
+  </header>
+
+  <!-- ===== BANNIÈRE TOUR (premier chargement) ===== -->
+  <div id="tour-banner" class="tour-banner hidden">
+    <span>Première visite ? Découvrez l'empreinte carbone mondiale en 8 étapes.</span>
+    <button id="tour-banner-start">Démarrer la visite</button>
+    <button id="tour-banner-close" aria-label="Fermer">✕</button>
+  </div>
+
+  <!-- ===== OVERLAY TOUR ===== -->
+  <div id="tour-overlay" class="tour-overlay hidden">
+    <div class="tour-tooltip">
+      <div class="tour-step-count">Étape <span id="tour-current">1</span>/<span id="tour-total">6</span></div>
+      <h3 id="tour-title"></h3>
+      <p id="tour-text"></p>
+      <div class="tour-actions">
+        <button id="tour-skip">Passer</button>
+        <button id="tour-next">Suivant →</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="right_menu">
+    <svg id="open__right_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+      </path>
+    </svg>
+
+    <div class="global__articles">
+
+      <div class="panel-right-header">▸ COMPRENDRE L'IMPACT</div>
+
+      <div class="articles-scroll">
+
+      <div class="article" data-theme="cyan">
+        <div class="header-articule">
+          <span class="titre_article">Qu'est-ce qu'un datacenter ?</span>
+          <button class="close_btn_article" aria-label="Fermer">✕</button>
+        </div>
+        <p class="description_article">
+          Les datacenters sont des entrepôts de serveurs qui font tourner internet, le cloud et l'IA. Ils consomment en
+          permanence de l'électricité pour le calcul et le refroidissement. En 2024, ils représentent ~1–2 % de la
+          consommation électrique mondiale — soit autant que l'aviation civile.
+        </p>
+      </div>
+
+      <div class="article" data-theme="violet">
+        <div class="header-articule">
+          <span class="titre_article">L'IA, nouveau moteur de la demande</span>
+          <button class="close_btn_article" aria-label="Fermer">✕</button>
+        </div>
+        <p class="description_article">
+          Entraîner un grand modèle comme GPT-4 émet ~300 tonnes de CO₂. Mais c'est l'inférence (utilisation
+          quotidienne) qui pèse le plus sur la durée. La demande IA fait exploser la construction : +40 % de capacité
+          datacenter prévu d'ici 2026 (IEA 2025).
+        </p>
+      </div>
+
+      <div class="article" data-theme="green">
+        <div class="header-articule">
+          <span class="titre_article">Empreinte carbone : comment ça se calcule ?</span>
+          <button class="close_btn_article" aria-label="Fermer">✕</button>
+        </div>
+        <p class="description_article">
+          <code class="formula">CO₂ (t/an) = Capacité (MW) × PUE × 8 760h × Intensité carbone (gCO₂/kWh) / 10⁶</code>
+          Le PUE (Power Usage Effectiveness) mesure l'efficacité : 1,0 = parfait, 1,58 = moyenne mondiale. Un DC de
+          100 MW en Allemagne (380 gCO₂/kWh, PUE 1,5) émet ~500 000 t CO₂/an.
+        </p>
+      </div>
+
+      <div class="article" data-theme="amber">
+        <div class="header-articule">
+          <span class="titre_article">La guerre de l'eau</span>
+          <button class="close_btn_article" aria-label="Fermer">✕</button>
+        </div>
+        <p class="description_article">
+          Les serveurs produisent de la chaleur. Pour les refroidir, les datacenters utilisent ~1,8 L d'eau par kWh
+          consommé. Un grand campus consomme autant qu'une ville de 50 000 habitants. En zones arides (Arizona,
+          Moyen-Orient), cela crée des conflits d'usage avec les populations locales.
+        </p>
+      </div>
+
+      <div class="article" data-theme="red">
+        <div class="header-articule">
+          <span class="titre_article">Souveraineté numérique</span>
+          <button class="close_btn_article" aria-label="Fermer">✕</button>
+        </div>
+        <p class="description_article">
+          80 % de la capacité mondiale est entre les mains de 5 entreprises américaines (hyperscalers). Les données
+          européennes transitent souvent par des infrastructures hors UE. Le RGPD, le Cloud Act américain et la
+          stratégie cloud souveraine européenne (EUCS) se livrent une bataille juridique et géopolitique invisible.
+        </p>
+      </div>
+
+      </div><!-- /.articles-scroll -->
+    </div>
+  </div>
+
+
+
+  <!-- ===== PANEL GAUCHE : FILTRES + STATS ===== -->
+  <aside class="panel panel-left" id="panel-left">
+    <div class="panel-section">
+      <div class="section-label">▸ INTENSITÉ CARBONE</div>
+      <div class="legend" id="legend-carbon">
+        <div class="legend-item" data-class="very_low">
+          <span class="legend-dot" style="--glow-color:#00ff88"></span>
+          <span>≤ 100 <em>gCO₂/kWh</em></span>
+          <span class="legend-tag">TRÈS FAIBLE</span>
+        </div>
+        <div class="legend-item" data-class="low">
+          <span class="legend-dot" style="--glow-color:#00d4ff"></span>
+          <span>≤ 250 <em>gCO₂/kWh</em></span>
+          <span class="legend-tag">FAIBLE</span>
+        </div>
+        <div class="legend-item" data-class="medium">
+          <span class="legend-dot" style="--glow-color:#ffcc00"></span>
+          <span>≤ 400 <em>gCO₂/kWh</em></span>
+          <span class="legend-tag">MOYEN</span>
+        </div>
+        <div class="legend-item" data-class="high">
+          <span class="legend-dot" style="--glow-color:#ff6600"></span>
+          <span>≤ 600 <em>gCO₂/kWh</em></span>
+          <span class="legend-tag">ÉLEVÉ</span>
+        </div>
+        <div class="legend-item" data-class="very_high">
+          <span class="legend-dot" style="--glow-color:#ff0044"></span>
+          <span>> 600 <em>gCO₂/kWh</em></span>
+          <span class="legend-tag">CRITIQUE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-divider"></div>
+
+    <div class="panel-section">
+      <div class="section-label">▸ FILTRES</div>
+
+      <div class="filter-group filter-group--operator">
+        <label class="filter-label" for="filter-operator">OPÉRATEUR</label>
+        <div class="select-wrapper">
+          <select id="filter-operator" class="hud-select">
+            <option value="">ALL OPERATORS</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label" for="filter-country">PAYS</label>
+        <div class="select-wrapper">
+          <select id="filter-country" class="hud-select">
+            <option value="">ALL COUNTRIES</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">SEUIL CARBONE MAX</label>
+        <div class="slider-wrapper">
+          <input type="range" id="filter-carbon" class="hud-slider" min="0" max="1000" value="1000" step="50" />
+          <div class="slider-value">
+            <span id="carbon-value">1000</span>
+            <em>gCO₂/kWh</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">STRESS HYDRIQUE</label>
+        <div class="checkbox-group">
+          <label class="hud-checkbox">
+            <input type="checkbox" value="low" checked /> <span>Faible</span>
+          </label>
+          <label class="hud-checkbox">
+            <input type="checkbox" value="low-medium" checked /> <span>Faible–Moyen</span>
+          </label>
+          <label class="hud-checkbox">
+            <input type="checkbox" value="medium-high" checked /> <span>Moyen–Élevé</span>
+          </label>
+          <label class="hud-checkbox">
+            <input type="checkbox" value="high" checked /> <span>Élevé</span>
+          </label>
+          <label class="hud-checkbox">
+            <input type="checkbox" value="extremely-high" checked /> <span>Critique</span>
+          </label>
+        </div>
+      </div>
+
+      <button class="hud-btn reset-btn" id="reset-filters">⟳ RESET FILTRES</button>
+
+      <div class="filter-group filter-group--ai">
+        <label class="filter-label">HÉBERGE DE L'IA</label>
+        <label class="hud-toggle" id="toggle-ai-label">
+          <input type="checkbox" id="filter-ai" checked />
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+          <span class="toggle-text">IA UNIQUEMENT</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="panel-divider"></div>
+
+    <div class="panel-section">
+      <div class="section-label">▸ STATS GLOBALES</div>
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-cell">
+          <div class="stat-value" id="stat-total">—</div>
+          <div class="stat-label">DATACENTERS</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value glow-green" id="stat-co2">—</div>
+          <div class="stat-label">MT CO₂/AN</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value glow-cyan" id="stat-water">—</div>
+          <div class="stat-label">KM³ EAU/AN</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-value glow-amber" id="stat-power">—</div>
+          <div class="stat-label">TWh/AN</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===== PANEL BAS : DISCOURS VS RÉALITÉ ===== -->
+  <div class="panel panel-bottom" id="panel-bottom">
+    <div class="section-label">▸ DISCOURS VS RÉALITÉ</div>
+    <div class="dvr-grid">
+      <div class="dvr-card">
+        <div class="dvr-operator">Google</div>
+        <div class="dvr-claim">
+          <span class="claim-badge claim-says">DIT</span>
+          Carbon neutral depuis 2007
+        </div>
+        <div class="dvr-reality">
+          <span class="claim-badge claim-real">RÉEL</span>
+          Émissions en hausse de +48% depuis 2019 (IA)
+        </div>
+      </div>
+      <div class="dvr-card">
+        <div class="dvr-operator">Microsoft</div>
+        <div class="dvr-claim">
+          <span class="claim-badge claim-says">DIT</span>
+          Carbon negative d'ici 2030
+        </div>
+        <div class="dvr-reality">
+          <span class="claim-badge claim-real">RÉEL</span>
+          Émissions +29% depuis 2020
+        </div>
+      </div>
+      <div class="dvr-card">
+        <div class="dvr-operator">Amazon AWS</div>
+        <div class="dvr-claim">
+          <span class="claim-badge claim-says">DIT</span>
+          100% renouvelable en 2025
+        </div>
+        <div class="dvr-reality">
+          <span class="claim-badge claim-real">RÉEL</span>
+          Matching annuel ≠ consommation réelle
+        </div>
+      </div>
+      <div class="dvr-card">
+        <div class="dvr-operator">Meta</div>
+        <div class="dvr-claim">
+          <span class="claim-badge claim-says">DIT</span>
+          Net zero émissions opérationnelles
+        </div>
+        <div class="dvr-reality">
+          <span class="claim-badge claim-real">RÉEL</span>
+          Scope 3 non inclus (+90% des émissions)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PANEL COMPARAISON RÉGIONALE ===== -->
+  <div id="region-compare-panel" class="compare-panel hidden">
+    <div class="compare-panel-header">
+      <span class="section-label">&#9658; COMPARAISON RÉGIONALE</span>
+      <div class="compare-metric-tabs">
+        <button class="compare-tab active" data-metric="carbon" title="Intensité CO₂ du mix électrique régional">Carbone ⚡</button>
+        <button class="compare-tab" data-metric="pue" title="Power Usage Effectiveness — efficacité des datacenters">Efficacité</button>
+        <button class="compare-tab" data-metric="llm_co2" title="CO₂ émis par une requête IA (~500 tokens)">IA &amp; CO&#8322;</button>
+        <button class="compare-tab" data-metric="water" title="Consommation d'eau par datacenter">Eau</button>
+        <button class="compare-tab" data-metric="llm_models" title="Comparer l'impact des modèles d'IA">Modèles IA 🤖</button>
+      </div>
+      <button id="compare-close" class="popup-close">&#10005;</button>
+    </div>
+    <div class="compare-content">
+      <div class="compare-col compare-col--regions">
+        <div class="compare-col-title">RÉGIONS <span id="compare-active-label">· CO&#8322;</span> <span class="compare-col-sub">— du plus vertueux au plus polluant</span></div>
+        <div id="compare-bars"></div>
+      </div>
+      <div class="compare-vdivider"></div>
+      <div class="compare-col compare-col--llm">
+        <div class="compare-col-title">IMPACT LLM <span class="compare-col-sub">· ECOLOGITS</span></div>
+        <div id="llm-tokens-control" class="llm-tokens-control hidden">
+          <label class="llm-tokens-label">
+            Tokens par requête : <span id="llm-tokens-value">500</span>
+          </label>
+          <input type="range" id="llm-tokens-slider" min="100" max="2000" step="100" value="500" class="hud-slider" />
+          <div class="llm-tokens-hint">Valeurs de référence EcoLogits à 500 tokens — adapte proportionnellement</div>
+        </div>
+        <div class="llm-body-split">
+          <div class="prompt-example" id="prompt-example-panel">
+            <div class="prompt-example-label">Exemple de prompt <span id="prompt-example-size" class="prompt-example-size"></span></div>
+            <div id="prompt-example-text" class="prompt-example-text"></div>
+          </div>
+          <div id="compare-llm"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== POPUP (injecté dynamiquement) ===== -->
+  <div id="popup-container"></div>
+
+  <!-- ===== TOOLTIP CLUSTER ===== -->
+  <div class="cluster-tooltip" id="cluster-tooltip" style="display:none">
+    <span id="cluster-count"></span> datacenters
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="js/equivalences.js"></script>
+  <script src="js/region-compare.js"></script>
+  <script src="js/regions.js"></script>
+  <script src="js/layers.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/region-popup.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tour.js"></script>
+  <script src="js/ui.js"></script>
+
+</body>
+
+</html>
