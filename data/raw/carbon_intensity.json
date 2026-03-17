@@ -1,0 +1,905 @@
+{
+  "_metadata": {
+    "carbon_unit": "gCO2/kWh",
+    "renewable_unit": "% of electricity generation (excl. nuclear)",
+    "low_carbon_unit": "% of electricity generation (incl. nuclear)",
+    "mix_keys": [
+      "nuclear",
+      "hydro",
+      "wind",
+      "solar",
+      "biofuel",
+      "other_ren",
+      "gas",
+      "coal",
+      "oil"
+    ],
+    "mix_unit": "% of electricity generation per source",
+    "default_world_carbon": 475,
+    "sources": [
+      "Our World in Data (OWID)",
+      "IEA Electricity 2024",
+      "Ember 2024"
+    ],
+    "year_reference": "2022-2023",
+    "note": "Utiliser '_default' si le pays n'est pas dans la liste"
+  },
+  "_default": {
+    "carbon_intensity_gco2_kwh": 475,
+    "renewable_share_elec_pct": null,
+    "low_carbon_share_elec_pct": null,
+    "mix": null
+  },
+  "AE": {
+    "carbon_intensity_gco2_kwh": 467.5,
+    "renewable_share_elec_pct": 8.8,
+    "low_carbon_share_elec_pct": 31.7,
+    "mix": {
+      "nuclear": 22.9,
+      "wind": 0.1,
+      "solar": 8.6,
+      "biofuel": 0.1,
+      "gas": 68.3,
+      "coal": 0.0,
+      "oil": 0.0,
+      "_year": 2024
+    }
+  },
+  "AR": {
+    "carbon_intensity_gco2_kwh": 344.8,
+    "renewable_share_elec_pct": 34.4,
+    "low_carbon_share_elec_pct": 41.2,
+    "mix": {
+      "nuclear": 6.9,
+      "hydro": 19.5,
+      "wind": 10.6,
+      "solar": 2.6,
+      "biofuel": 1.7,
+      "gas": 53.7,
+      "coal": 0.9,
+      "oil": 4.2,
+      "_year": 2024
+    }
+  },
+  "AT": {
+    "carbon_intensity_gco2_kwh": 113.9,
+    "renewable_share_elec_pct": 84.1,
+    "low_carbon_share_elec_pct": 84.1,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 52.4,
+      "wind": 11.6,
+      "solar": 14.1,
+      "biofuel": 6.0,
+      "other_ren": 0.0,
+      "gas": 11.6,
+      "coal": 0.0,
+      "oil": 4.3,
+      "_year": 2025
+    }
+  },
+  "AU": {
+    "carbon_intensity_gco2_kwh": 553.8,
+    "renewable_share_elec_pct": 35.1,
+    "low_carbon_share_elec_pct": 35.1,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 4.6,
+      "wind": 11.6,
+      "solar": 17.8,
+      "biofuel": 1.1,
+      "gas": 17.4,
+      "coal": 45.2,
+      "oil": 2.3,
+      "_year": 2024
+    }
+  },
+  "BD": {
+    "carbon_intensity_gco2_kwh": 693.8,
+    "renewable_share_elec_pct": 2.0,
+    "low_carbon_share_elec_pct": 2.0,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 0.8,
+      "wind": 0.0,
+      "solar": 1.2,
+      "biofuel": 0.0,
+      "other_ren": 0.0,
+      "gas": 61.5,
+      "coal": 20.2,
+      "oil": 16.3,
+      "_year": 2024
+    }
+  },
+  "BE": {
+    "carbon_intensity_gco2_kwh": 149.8,
+    "renewable_share_elec_pct": 39.0,
+    "low_carbon_share_elec_pct": 72.0,
+    "mix": {
+      "nuclear": 33.1,
+      "hydro": 0.6,
+      "wind": 18.8,
+      "solar": 14.3,
+      "biofuel": 5.2,
+      "other_ren": 0.0,
+      "gas": 21.5,
+      "coal": 0.0,
+      "oil": 6.4,
+      "_year": 2025
+    }
+  },
+  "BR": {
+    "carbon_intensity_gco2_kwh": 106.1,
+    "renewable_share_elec_pct": 87.3,
+    "low_carbon_share_elec_pct": 89.4,
+    "mix": {
+      "nuclear": 2.1,
+      "hydro": 55.4,
+      "wind": 14.5,
+      "solar": 9.6,
+      "biofuel": 7.8,
+      "gas": 6.5,
+      "coal": 2.2,
+      "oil": 1.8,
+      "_year": 2024
+    }
+  },
+  "CA": {
+    "carbon_intensity_gco2_kwh": 185.3,
+    "renewable_share_elec_pct": 64.3,
+    "low_carbon_share_elec_pct": 77.7,
+    "mix": {
+      "nuclear": 13.4,
+      "hydro": 53.9,
+      "wind": 7.4,
+      "solar": 1.5,
+      "biofuel": 1.5,
+      "gas": 17.2,
+      "coal": 3.9,
+      "oil": 1.1,
+      "_year": 2024
+    }
+  },
+  "CH": {
+    "carbon_intensity_gco2_kwh": 32.6,
+    "renewable_share_elec_pct": 67.1,
+    "low_carbon_share_elec_pct": 98.3,
+    "mix": {
+      "nuclear": 31.2,
+      "hydro": 54.0,
+      "wind": 0.2,
+      "solar": 12.8,
+      "coal": 0.0,
+      "oil": 1.7,
+      "_year": 2025
+    }
+  },
+  "CL": {
+    "carbon_intensity_gco2_kwh": 265.2,
+    "renewable_share_elec_pct": 69.9,
+    "low_carbon_share_elec_pct": 69.9,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 29.6,
+      "wind": 11.9,
+      "solar": 22.3,
+      "biofuel": 5.8,
+      "other_ren": 0.3,
+      "gas": 11.6,
+      "coal": 15.8,
+      "oil": 2.7,
+      "_year": 2024
+    }
+  },
+  "CN": {
+    "carbon_intensity_gco2_kwh": 555.4,
+    "renewable_share_elec_pct": 33.7,
+    "low_carbon_share_elec_pct": 38.2,
+    "mix": {
+      "nuclear": 4.5,
+      "hydro": 13.4,
+      "wind": 9.9,
+      "solar": 8.3,
+      "biofuel": 2.1,
+      "gas": 3.2,
+      "coal": 57.8,
+      "oil": 0.9,
+      "_year": 2024
+    }
+  },
+  "CO": {
+    "carbon_intensity_gco2_kwh": 285.8,
+    "renewable_share_elec_pct": 64.4,
+    "low_carbon_share_elec_pct": 64.4,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 58.1,
+      "wind": 0.0,
+      "solar": 3.7,
+      "biofuel": 2.6,
+      "other_ren": 0.0,
+      "gas": 16.8,
+      "coal": 15.2,
+      "oil": 3.7,
+      "_year": 2024
+    }
+  },
+  "CZ": {
+    "carbon_intensity_gco2_kwh": 401.4,
+    "renewable_share_elec_pct": 16.9,
+    "low_carbon_share_elec_pct": 59.2,
+    "mix": {
+      "nuclear": 42.3,
+      "hydro": 2.3,
+      "wind": 0.8,
+      "solar": 5.8,
+      "biofuel": 8.0,
+      "other_ren": 0.0,
+      "gas": 5.4,
+      "coal": 35.2,
+      "oil": 0.2,
+      "_year": 2025
+    }
+  },
+  "DE": {
+    "carbon_intensity_gco2_kwh": 331.6,
+    "renewable_share_elec_pct": 58.8,
+    "low_carbon_share_elec_pct": 58.8,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 3.9,
+      "wind": 26.7,
+      "solar": 18.0,
+      "biofuel": 10.2,
+      "other_ren": 0.0,
+      "gas": 16.6,
+      "coal": 20.7,
+      "oil": 3.8,
+      "_year": 2025
+    }
+  },
+  "DK": {
+    "carbon_intensity_gco2_kwh": 114.3,
+    "renewable_share_elec_pct": 91.2,
+    "low_carbon_share_elec_pct": 91.2,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 0.1,
+      "wind": 57.8,
+      "solar": 13.3,
+      "biofuel": 20.0,
+      "other_ren": 0.0,
+      "gas": 2.4,
+      "coal": 2.7,
+      "oil": 3.7,
+      "_year": 2025
+    }
+  },
+  "EG": {
+    "carbon_intensity_gco2_kwh": 574.5,
+    "renewable_share_elec_pct": 11.2,
+    "low_carbon_share_elec_pct": 11.2,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 6.1,
+      "wind": 2.6,
+      "solar": 2.6,
+      "biofuel": 0.0,
+      "gas": 81.3,
+      "coal": 0.0,
+      "oil": 7.5,
+      "_year": 2024
+    }
+  },
+  "ES": {
+    "carbon_intensity_gco2_kwh": 153.3,
+    "renewable_share_elec_pct": 56.0,
+    "low_carbon_share_elec_pct": 74.7,
+    "mix": {
+      "nuclear": 18.7,
+      "hydro": 11.3,
+      "wind": 20.6,
+      "solar": 21.8,
+      "biofuel": 2.2,
+      "other_ren": 0.0,
+      "gas": 21.5,
+      "coal": 0.3,
+      "oil": 3.5,
+      "_year": 2025
+    }
+  },
+  "FI": {
+    "carbon_intensity_gco2_kwh": 56.8,
+    "renewable_share_elec_pct": 56.0,
+    "low_carbon_share_elec_pct": 96.3,
+    "mix": {
+      "nuclear": 40.4,
+      "hydro": 15.0,
+      "wind": 27.3,
+      "solar": 1.2,
+      "biofuel": 12.3,
+      "other_ren": 0.2,
+      "gas": 1.1,
+      "coal": 0.2,
+      "oil": 2.3,
+      "_year": 2025
+    }
+  },
+  "FR": {
+    "carbon_intensity_gco2_kwh": 41.8,
+    "renewable_share_elec_pct": 25.8,
+    "low_carbon_share_elec_pct": 94.8,
+    "mix": {
+      "nuclear": 69.0,
+      "hydro": 10.5,
+      "wind": 7.8,
+      "solar": 5.6,
+      "biofuel": 1.9,
+      "other_ren": 0.1,
+      "gas": 3.0,
+      "coal": 0.3,
+      "oil": 1.8,
+      "_year": 2025
+    }
+  },
+  "GB": {
+    "carbon_intensity_gco2_kwh": 217.1,
+    "renewable_share_elec_pct": 52.0,
+    "low_carbon_share_elec_pct": 64.5,
+    "mix": {
+      "nuclear": 12.4,
+      "hydro": 1.9,
+      "wind": 29.5,
+      "solar": 6.6,
+      "biofuel": 14.1,
+      "gas": 31.1,
+      "coal": 0.1,
+      "oil": 4.4,
+      "_year": 2025
+    }
+  },
+  "GR": {
+    "carbon_intensity_gco2_kwh": 315.6,
+    "renewable_share_elec_pct": 49.6,
+    "low_carbon_share_elec_pct": 49.6,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 5.9,
+      "wind": 20.3,
+      "solar": 22.2,
+      "biofuel": 1.2,
+      "other_ren": 0.0,
+      "gas": 38.5,
+      "coal": 4.7,
+      "oil": 7.2,
+      "_year": 2025
+    }
+  },
+  "HU": {
+    "carbon_intensity_gco2_kwh": 162.3,
+    "renewable_share_elec_pct": 35.7,
+    "low_carbon_share_elec_pct": 75.5,
+    "mix": {
+      "nuclear": 39.8,
+      "hydro": 0.6,
+      "wind": 1.4,
+      "solar": 27.7,
+      "biofuel": 5.9,
+      "other_ren": 0.0,
+      "gas": 20.1,
+      "coal": 3.4,
+      "oil": 1.0,
+      "_year": 2025
+    }
+  },
+  "ID": {
+    "carbon_intensity_gco2_kwh": 680.2,
+    "renewable_share_elec_pct": 18.1,
+    "low_carbon_share_elec_pct": 18.1,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 7.3,
+      "wind": 0.1,
+      "solar": 0.4,
+      "biofuel": 5.7,
+      "other_ren": 4.5,
+      "gas": 18.5,
+      "coal": 61.5,
+      "oil": 1.9,
+      "_year": 2024
+    }
+  },
+  "IE": {
+    "carbon_intensity_gco2_kwh": 255.9,
+    "renewable_share_elec_pct": 48.4,
+    "low_carbon_share_elec_pct": 48.4,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 2.2,
+      "wind": 38.2,
+      "solar": 4.8,
+      "biofuel": 3.2,
+      "other_ren": 0.0,
+      "gas": 48.1,
+      "coal": 0.5,
+      "oil": 3.0,
+      "_year": 2025
+    }
+  },
+  "IN": {
+    "carbon_intensity_gco2_kwh": 707.5,
+    "renewable_share_elec_pct": 19.6,
+    "low_carbon_share_elec_pct": 22.3,
+    "mix": {
+      "nuclear": 2.7,
+      "hydro": 7.7,
+      "wind": 4.0,
+      "solar": 6.7,
+      "biofuel": 1.1,
+      "gas": 2.8,
+      "coal": 74.8,
+      "oil": 0.2,
+      "_year": 2024
+    }
+  },
+  "IS": {
+    "carbon_intensity_gco2_kwh": 28.3,
+    "renewable_share_elec_pct": 100.0,
+    "low_carbon_share_elec_pct": 100.0,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 70.1,
+      "wind": 0.1,
+      "solar": 0.0,
+      "biofuel": 0.0,
+      "other_ren": 29.9,
+      "gas": 0.0,
+      "coal": 0.0,
+      "oil": 0.0,
+      "_year": 2023
+    }
+  },
+  "IT": {
+    "carbon_intensity_gco2_kwh": 285.3,
+    "renewable_share_elec_pct": 48.7,
+    "low_carbon_share_elec_pct": 48.7,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 15.6,
+      "wind": 8.1,
+      "solar": 16.9,
+      "biofuel": 5.9,
+      "other_ren": 2.2,
+      "gas": 47.3,
+      "coal": 1.4,
+      "oil": 2.6,
+      "_year": 2025
+    }
+  },
+  "JP": {
+    "carbon_intensity_gco2_kwh": 483.4,
+    "renewable_share_elec_pct": 22.9,
+    "low_carbon_share_elec_pct": 31.3,
+    "mix": {
+      "nuclear": 8.4,
+      "hydro": 7.8,
+      "wind": 1.1,
+      "solar": 9.5,
+      "biofuel": 4.5,
+      "gas": 34.1,
+      "coal": 32.2,
+      "oil": 2.5,
+      "_year": 2024
+    }
+  },
+  "KE": {
+    "carbon_intensity_gco2_kwh": 84.8,
+    "renewable_share_elec_pct": 91.9,
+    "low_carbon_share_elec_pct": 91.9,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 28.1,
+      "wind": 14.1,
+      "solar": 4.3,
+      "biofuel": 2.2,
+      "other_ren": 43.3,
+      "gas": 0.0,
+      "coal": 0.0,
+      "oil": 8.1,
+      "_year": 2024
+    }
+  },
+  "KR": {
+    "carbon_intensity_gco2_kwh": 415.5,
+    "renewable_share_elec_pct": 9.7,
+    "low_carbon_share_elec_pct": 39.9,
+    "mix": {
+      "nuclear": 30.2,
+      "hydro": 0.7,
+      "wind": 0.5,
+      "solar": 5.2,
+      "biofuel": 3.3,
+      "gas": 28.5,
+      "coal": 30.5,
+      "oil": 1.1,
+      "_year": 2024
+    }
+  },
+  "KZ": {
+    "carbon_intensity_gco2_kwh": 802.0,
+    "renewable_share_elec_pct": 15.2,
+    "low_carbon_share_elec_pct": 15.2,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 9.5,
+      "wind": 4.1,
+      "solar": 1.6,
+      "biofuel": 0.0,
+      "gas": 29.3,
+      "coal": 54.0,
+      "oil": 1.5,
+      "_year": 2024
+    }
+  },
+  "LU": {
+    "carbon_intensity_gco2_kwh": 124.2,
+    "renewable_share_elec_pct": 91.5,
+    "low_carbon_share_elec_pct": 91.5,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 3.3,
+      "wind": 30.1,
+      "solar": 30.7,
+      "biofuel": 27.5,
+      "other_ren": 0.0,
+      "gas": 3.9,
+      "coal": 0.0,
+      "oil": 4.6,
+      "_year": 2025
+    }
+  },
+  "MX": {
+    "carbon_intensity_gco2_kwh": 483.1,
+    "renewable_share_elec_pct": 21.1,
+    "low_carbon_share_elec_pct": 24.6,
+    "mix": {
+      "nuclear": 3.5,
+      "hydro": 6.6,
+      "wind": 5.6,
+      "solar": 7.2,
+      "biofuel": 1.7,
+      "gas": 62.4,
+      "coal": 3.5,
+      "oil": 9.5,
+      "_year": 2024
+    }
+  },
+  "MY": {
+    "carbon_intensity_gco2_kwh": 604.4,
+    "renewable_share_elec_pct": 19.7,
+    "low_carbon_share_elec_pct": 19.7,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 16.9,
+      "wind": 0.0,
+      "solar": 2.1,
+      "biofuel": 0.7,
+      "gas": 36.7,
+      "coal": 43.0,
+      "oil": 0.6,
+      "_year": 2024
+    }
+  },
+  "NG": {
+    "carbon_intensity_gco2_kwh": 507.9,
+    "renewable_share_elec_pct": 23.0,
+    "low_carbon_share_elec_pct": 23.0,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 22.6,
+      "wind": 0.0,
+      "solar": 0.2,
+      "biofuel": 0.1,
+      "other_ren": 0.0,
+      "gas": 77.0,
+      "coal": 0.0,
+      "oil": 0.0,
+      "_year": 2024
+    }
+  },
+  "NL": {
+    "carbon_intensity_gco2_kwh": 253.2,
+    "renewable_share_elec_pct": 51.3,
+    "low_carbon_share_elec_pct": 54.2,
+    "mix": {
+      "nuclear": 3.0,
+      "hydro": 0.0,
+      "wind": 25.1,
+      "solar": 21.1,
+      "biofuel": 5.1,
+      "other_ren": 0.0,
+      "gas": 34.8,
+      "coal": 7.1,
+      "oil": 3.9,
+      "_year": 2025
+    }
+  },
+  "NO": {
+    "carbon_intensity_gco2_kwh": 29.1,
+    "renewable_share_elec_pct": 98.8,
+    "low_carbon_share_elec_pct": 98.8,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 89.9,
+      "wind": 8.4,
+      "solar": 0.2,
+      "biofuel": 0.2,
+      "other_ren": 0.1,
+      "gas": 0.7,
+      "coal": 0.0,
+      "oil": 0.5,
+      "_year": 2025
+    }
+  },
+  "NZ": {
+    "carbon_intensity_gco2_kwh": 119.7,
+    "renewable_share_elec_pct": 85.1,
+    "low_carbon_share_elec_pct": 85.1,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 52.9,
+      "wind": 9.9,
+      "solar": 0.8,
+      "biofuel": 1.6,
+      "other_ren": 19.9,
+      "gas": 9.6,
+      "coal": 3.8,
+      "oil": 1.6,
+      "_year": 2024
+    }
+  },
+  "PH": {
+    "carbon_intensity_gco2_kwh": 612.4,
+    "renewable_share_elec_pct": 21.7,
+    "low_carbon_share_elec_pct": 21.7,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 8.6,
+      "wind": 1.0,
+      "solar": 2.9,
+      "biofuel": 1.0,
+      "other_ren": 8.2,
+      "gas": 14.1,
+      "coal": 62.5,
+      "oil": 1.7,
+      "_year": 2024
+    }
+  },
+  "PK": {
+    "carbon_intensity_gco2_kwh": 398.2,
+    "renewable_share_elec_pct": 32.9,
+    "low_carbon_share_elec_pct": 46.4,
+    "mix": {
+      "nuclear": 13.5,
+      "hydro": 18.9,
+      "wind": 3.0,
+      "solar": 10.0,
+      "biofuel": 1.1,
+      "other_ren": 0.0,
+      "gas": 25.0,
+      "coal": 14.0,
+      "oil": 14.7,
+      "_year": 2024
+    }
+  },
+  "PL": {
+    "carbon_intensity_gco2_kwh": 592.2,
+    "renewable_share_elec_pct": 31.1,
+    "low_carbon_share_elec_pct": 31.1,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 1.0,
+      "wind": 13.7,
+      "solar": 11.4,
+      "biofuel": 4.9,
+      "other_ren": 0.1,
+      "gas": 14.4,
+      "coal": 50.7,
+      "oil": 3.8,
+      "_year": 2025
+    }
+  },
+  "PT": {
+    "carbon_intensity_gco2_kwh": 127.8,
+    "renewable_share_elec_pct": 81.0,
+    "low_carbon_share_elec_pct": 81.0,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 29.7,
+      "wind": 26.8,
+      "solar": 17.3,
+      "biofuel": 6.8,
+      "other_ren": 0.4,
+      "gas": 16.4,
+      "coal": 0.0,
+      "oil": 2.6,
+      "_year": 2025
+    }
+  },
+  "RO": {
+    "carbon_intensity_gco2_kwh": 250.8,
+    "renewable_share_elec_pct": 47.0,
+    "low_carbon_share_elec_pct": 67.5,
+    "mix": {
+      "nuclear": 20.5,
+      "hydro": 24.3,
+      "wind": 12.0,
+      "solar": 9.8,
+      "biofuel": 1.0,
+      "other_ren": 0.0,
+      "gas": 18.7,
+      "coal": 13.4,
+      "oil": 0.4,
+      "_year": 2025
+    }
+  },
+  "RU": {
+    "carbon_intensity_gco2_kwh": 446.0,
+    "renewable_share_elec_pct": 18.1,
+    "low_carbon_share_elec_pct": 35.9,
+    "mix": {
+      "nuclear": 17.8,
+      "hydro": 17.4,
+      "wind": 0.4,
+      "solar": 0.2,
+      "biofuel": 0.1,
+      "gas": 45.1,
+      "coal": 17.8,
+      "oil": 1.1,
+      "_year": 2024
+    }
+  },
+  "SA": {
+    "carbon_intensity_gco2_kwh": 692.0,
+    "renewable_share_elec_pct": 2.2,
+    "low_carbon_share_elec_pct": 2.2,
+    "mix": {
+      "nuclear": 0.0,
+      "wind": 0.3,
+      "solar": 1.8,
+      "biofuel": 0.0,
+      "gas": 63.3,
+      "coal": 0.0,
+      "oil": 34.5,
+      "_year": 2024
+    }
+  },
+  "SE": {
+    "carbon_intensity_gco2_kwh": 35.3,
+    "renewable_share_elec_pct": 71.2,
+    "low_carbon_share_elec_pct": 98.8,
+    "mix": {
+      "nuclear": 27.6,
+      "hydro": 40.0,
+      "wind": 22.7,
+      "solar": 2.7,
+      "biofuel": 5.8,
+      "other_ren": 0.0,
+      "gas": 0.1,
+      "coal": 0.0,
+      "oil": 1.2,
+      "_year": 2025
+    }
+  },
+  "SG": {
+    "carbon_intensity_gco2_kwh": 498.7,
+    "renewable_share_elec_pct": 4.9,
+    "low_carbon_share_elec_pct": 4.9,
+    "mix": {
+      "nuclear": 0.0,
+      "solar": 2.1,
+      "biofuel": 2.8,
+      "gas": 92.1,
+      "coal": 1.0,
+      "oil": 2.0,
+      "_year": 2024
+    }
+  },
+  "TH": {
+    "carbon_intensity_gco2_kwh": 554.7,
+    "renewable_share_elec_pct": 14.8,
+    "low_carbon_share_elec_pct": 14.8,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 3.2,
+      "wind": 1.7,
+      "solar": 2.7,
+      "biofuel": 7.2,
+      "gas": 68.3,
+      "coal": 16.7,
+      "oil": 0.1,
+      "_year": 2024
+    }
+  },
+  "TW": {
+    "carbon_intensity_gco2_kwh": 635.2,
+    "renewable_share_elec_pct": 10.9,
+    "low_carbon_share_elec_pct": 15.1,
+    "mix": {
+      "nuclear": 4.2,
+      "hydro": 1.5,
+      "wind": 3.6,
+      "solar": 5.2,
+      "biofuel": 0.7,
+      "gas": 43.3,
+      "coal": 40.1,
+      "oil": 1.5,
+      "_year": 2024
+    }
+  },
+  "UA": {
+    "carbon_intensity_gco2_kwh": 250.5,
+    "renewable_share_elec_pct": 16.4,
+    "low_carbon_share_elec_pct": 72.2,
+    "mix": {
+      "nuclear": 55.8,
+      "hydro": 9.9,
+      "wind": 1.3,
+      "solar": 4.6,
+      "biofuel": 0.7,
+      "gas": 6.4,
+      "coal": 20.9,
+      "oil": 0.5,
+      "_year": 2022
+    }
+  },
+  "US": {
+    "carbon_intensity_gco2_kwh": 383.8,
+    "renewable_share_elec_pct": 24.1,
+    "low_carbon_share_elec_pct": 41.9,
+    "mix": {
+      "nuclear": 17.8,
+      "hydro": 5.4,
+      "wind": 10.3,
+      "solar": 6.9,
+      "biofuel": 1.1,
+      "other_ren": 0.4,
+      "gas": 42.6,
+      "coal": 14.9,
+      "oil": 0.7,
+      "_year": 2024
+    }
+  },
+  "VN": {
+    "carbon_intensity_gco2_kwh": 484.3,
+    "renewable_share_elec_pct": 42.3,
+    "low_carbon_share_elec_pct": 42.3,
+    "mix": {
+      "nuclear": 0.0,
+      "hydro": 29.2,
+      "wind": 4.2,
+      "solar": 8.5,
+      "biofuel": 0.3,
+      "gas": 7.2,
+      "coal": 50.3,
+      "oil": 0.2,
+      "_year": 2024
+    }
+  },
+  "ZA": {
+    "carbon_intensity_gco2_kwh": 713.2,
+    "renewable_share_elec_pct": 13.1,
+    "low_carbon_share_elec_pct": 16.2,
+    "mix": {
+      "nuclear": 3.1,
+      "hydro": 0.4,
+      "wind": 4.5,
+      "solar": 8.0,
+      "biofuel": 0.2,
+      "gas": 0.0,
+      "coal": 83.0,
+      "oil": 0.8,
+      "_year": 2024
+    }
+  }
+}

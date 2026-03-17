@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.local
+*.env
+
+# Sauvegardes
+data copy/
+*_backup/
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Éditeurs
+.DS_Store
+.vscode/
+*.swp
+*~
+
+# Claude Code (instructions internes)
+CLAUDE.md

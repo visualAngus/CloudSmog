@@ -1,0 +1,926 @@
+{
+  "metadata": {
+    "description": "Dataset manuel des grands datacenters mondiaux",
+    "sources": [
+      "Google Environmental Report 2024",
+      "Microsoft ESG 2024",
+      "AWS Sustainability Report 2023",
+      "Meta Sustainability Report 2023",
+      "OVHcloud ESG Report 2023",
+      "Uptime Institute Global Data Center Survey 2024",
+      "Equinix ESG Report 2023"
+    ],
+    "last_updated": "2024-01"
+  },
+  "defaults": {
+    "google":    { "pue": 1.12, "energy_source_pct_renewable": 100, "operator_commitment_net_zero": "2030" },
+    "aws":       { "pue": 1.15, "energy_source_pct_renewable": 100, "operator_commitment_net_zero": "2040" },
+    "microsoft": { "pue": 1.18, "energy_source_pct_renewable": 100, "operator_commitment_net_zero": "2030" },
+    "meta":      { "pue": 1.10, "energy_source_pct_renewable": 100, "operator_commitment_net_zero": "2030" },
+    "ovh":       { "pue": 1.30, "energy_source_pct_renewable": 80,  "operator_commitment_net_zero": "2030" },
+    "equinix":   { "pue": 1.45, "energy_source_pct_renewable": 96,  "operator_commitment_net_zero": "2030" },
+    "digitalrealty": { "pue": 1.50, "energy_source_pct_renewable": 75, "operator_commitment_net_zero": "2030" }
+  },
+  "datacenters": [
+    {
+      "name": "Google The Dalles (OR)",
+      "operator": "Google",
+      "lat": 45.5946, "lon": -121.1868,
+      "country": "US", "city": "The Dalles",
+      "capacity_mw": 390, "pue": 1.11,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Council Bluffs (IA)",
+      "operator": "Google",
+      "lat": 41.2619, "lon": -95.8608,
+      "country": "US", "city": "Council Bluffs",
+      "capacity_mw": 350, "pue": 1.10,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Lenoir (NC)",
+      "operator": "Google",
+      "lat": 35.9132, "lon": -81.5290,
+      "country": "US", "city": "Lenoir",
+      "capacity_mw": 300, "pue": 1.12,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Mayes County (OK)",
+      "operator": "Google",
+      "lat": 36.3084, "lon": -95.4338,
+      "country": "US", "city": "Mayes County",
+      "capacity_mw": 290, "pue": 1.12,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google St. Ghislain",
+      "operator": "Google",
+      "lat": 50.4577, "lon": 3.8243,
+      "country": "BE", "city": "Saint-Ghislain",
+      "capacity_mw": 250, "pue": 1.08,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Eemshaven",
+      "operator": "Google",
+      "lat": 53.4369, "lon": 6.8295,
+      "country": "NL", "city": "Eemshaven",
+      "capacity_mw": 400, "pue": 1.09,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Hamina",
+      "operator": "Google",
+      "lat": 60.5644, "lon": 27.1973,
+      "country": "FI", "city": "Hamina",
+      "capacity_mw": 280, "pue": 1.07,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Singapore",
+      "operator": "Google",
+      "lat": 1.3521, "lon": 103.8198,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 120, "pue": 1.15,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Taiwan",
+      "operator": "Google",
+      "lat": 24.1477, "lon": 120.6736,
+      "country": "TW", "city": "Changhua",
+      "capacity_mw": 200, "pue": 1.13,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Google Sydney",
+      "operator": "Google",
+      "lat": -33.8688, "lon": 151.2093,
+      "country": "AU", "city": "Sydney",
+      "capacity_mw": 80, "pue": 1.14,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Google São Paulo",
+      "operator": "Google",
+      "lat": -23.5505, "lon": -46.6333,
+      "country": "BR", "city": "São Paulo",
+      "capacity_mw": 60, "pue": 1.15,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS us-east-1 (Ashburn VA)",
+      "operator": "Amazon",
+      "lat": 39.0437, "lon": -77.4875,
+      "country": "US", "city": "Ashburn",
+      "capacity_mw": 600, "pue": 1.15,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS us-west-2 (Oregon)",
+      "operator": "Amazon",
+      "lat": 45.6769, "lon": -121.1803,
+      "country": "US", "city": "The Dalles",
+      "capacity_mw": 450, "pue": 1.13,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS eu-west-1 (Dublin)",
+      "operator": "Amazon",
+      "lat": 53.3498, "lon": -6.2603,
+      "country": "IE", "city": "Dublin",
+      "capacity_mw": 350, "pue": 1.16,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS eu-central-1 (Frankfurt)",
+      "operator": "Amazon",
+      "lat": 50.1109, "lon": 8.6821,
+      "country": "DE", "city": "Frankfurt",
+      "capacity_mw": 400, "pue": 1.17,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS ap-northeast-1 (Tokyo)",
+      "operator": "Amazon",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 300, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS ap-southeast-1 (Singapore)",
+      "operator": "Amazon",
+      "lat": 1.3521, "lon": 103.8198,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 250, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS sa-east-1 (São Paulo)",
+      "operator": "Amazon",
+      "lat": -23.5505, "lon": -46.6333,
+      "country": "BR", "city": "São Paulo",
+      "capacity_mw": 150, "pue": 1.20,
+      "energy_source_pct_renewable": 61,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS ap-south-1 (Mumbai)",
+      "operator": "Amazon",
+      "lat": 19.0760, "lon": 72.8777,
+      "country": "IN", "city": "Mumbai",
+      "capacity_mw": 200, "pue": 1.25,
+      "energy_source_pct_renewable": 55,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "AWS ca-central-1 (Montreal)",
+      "operator": "Amazon",
+      "lat": 45.5017, "lon": -73.5673,
+      "country": "CA", "city": "Montréal",
+      "capacity_mw": 200, "pue": 1.15,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure East US (Virginia)",
+      "operator": "Microsoft",
+      "lat": 37.3382, "lon": -79.3694,
+      "country": "US", "city": "Boydton",
+      "capacity_mw": 500, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure West Europe (Amsterdam)",
+      "operator": "Microsoft",
+      "lat": 52.3676, "lon": 4.9041,
+      "country": "NL", "city": "Amsterdam",
+      "capacity_mw": 400, "pue": 1.17,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure North Europe (Dublin)",
+      "operator": "Microsoft",
+      "lat": 53.3498, "lon": -6.2603,
+      "country": "IE", "city": "Dublin",
+      "capacity_mw": 350, "pue": 1.16,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure Southeast Asia (Singapore)",
+      "operator": "Microsoft",
+      "lat": 1.3521, "lon": 103.8198,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 200, "pue": 1.20,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure Japan East (Tokyo)",
+      "operator": "Microsoft",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 150, "pue": 1.19,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure France Central (Paris)",
+      "operator": "Microsoft",
+      "lat": 48.8566, "lon": 2.3522,
+      "country": "FR", "city": "Paris",
+      "capacity_mw": 200, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure Germany West Central (Frankfurt)",
+      "operator": "Microsoft",
+      "lat": 50.1109, "lon": 8.6821,
+      "country": "DE", "city": "Frankfurt",
+      "capacity_mw": 250, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Azure Brazil South (São Paulo)",
+      "operator": "Microsoft",
+      "lat": -23.5505, "lon": -46.6333,
+      "country": "BR", "city": "São Paulo",
+      "capacity_mw": 100, "pue": 1.22,
+      "energy_source_pct_renewable": 80,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Meta Prineville (OR)",
+      "operator": "Meta",
+      "lat": 44.2998, "lon": -120.8346,
+      "country": "US", "city": "Prineville",
+      "capacity_mw": 430, "pue": 1.08,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Meta Forest City (NC)",
+      "operator": "Meta",
+      "lat": 35.3318, "lon": -81.8651,
+      "country": "US", "city": "Forest City",
+      "capacity_mw": 290, "pue": 1.09,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Meta Lulea",
+      "operator": "Meta",
+      "lat": 65.5848, "lon": 22.1547,
+      "country": "SE", "city": "Luleå",
+      "capacity_mw": 280, "pue": 1.07,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Meta Clonee",
+      "operator": "Meta",
+      "lat": 53.6000, "lon": -6.4333,
+      "country": "IE", "city": "Clonee",
+      "capacity_mw": 400, "pue": 1.09,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Meta Fort Worth (TX)",
+      "operator": "Meta",
+      "lat": 32.7555, "lon": -97.3308,
+      "country": "US", "city": "Fort Worth",
+      "capacity_mw": 350, "pue": 1.10,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Meta Eagle Mountain (UT)",
+      "operator": "Meta",
+      "lat": 40.3144, "lon": -112.0012,
+      "country": "US", "city": "Eagle Mountain",
+      "capacity_mw": 300, "pue": 1.09,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "OVHcloud Strasbourg SBG",
+      "operator": "OVHcloud",
+      "lat": 48.5734, "lon": 7.7521,
+      "country": "FR", "city": "Strasbourg",
+      "capacity_mw": 130, "pue": 1.30,
+      "energy_source_pct_renewable": 80,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "OVHcloud Gravelines GRA",
+      "operator": "OVHcloud",
+      "lat": 50.9876, "lon": 2.1284,
+      "country": "FR", "city": "Gravelines",
+      "capacity_mw": 230, "pue": 1.25,
+      "energy_source_pct_renewable": 85,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "OVHcloud Roubaix RBX",
+      "operator": "OVHcloud",
+      "lat": 50.6942, "lon": 3.1746,
+      "country": "FR", "city": "Roubaix",
+      "capacity_mw": 80, "pue": 1.35,
+      "energy_source_pct_renewable": 75,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "OVHcloud Beauharnois BHS",
+      "operator": "OVHcloud",
+      "lat": 45.3181, "lon": -73.8754,
+      "country": "CA", "city": "Beauharnois",
+      "capacity_mw": 100, "pue": 1.28,
+      "energy_source_pct_renewable": 95,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "OVHcloud London LON",
+      "operator": "OVHcloud",
+      "lat": 51.5074, "lon": -0.1278,
+      "country": "GB", "city": "London",
+      "capacity_mw": 50, "pue": 1.40,
+      "energy_source_pct_renewable": 75,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "OVHcloud Frankfurt FRA",
+      "operator": "OVHcloud",
+      "lat": 50.1109, "lon": 8.6821,
+      "country": "DE", "city": "Frankfurt",
+      "capacity_mw": 60, "pue": 1.38,
+      "energy_source_pct_renewable": 70,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "OVHcloud Warsaw WAW",
+      "operator": "OVHcloud",
+      "lat": 52.2297, "lon": 21.0122,
+      "country": "PL", "city": "Warsaw",
+      "capacity_mw": 40, "pue": 1.40,
+      "energy_source_pct_renewable": 40,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Equinix SV1 San Jose",
+      "operator": "Equinix",
+      "lat": 37.3387, "lon": -121.8853,
+      "country": "US", "city": "San Jose",
+      "capacity_mw": 35, "pue": 1.50,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix NY2 Secaucus",
+      "operator": "Equinix",
+      "lat": 40.7799, "lon": -74.0566,
+      "country": "US", "city": "Secaucus",
+      "capacity_mw": 30, "pue": 1.52,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix LD4 Slough",
+      "operator": "Equinix",
+      "lat": 51.5160, "lon": -0.5751,
+      "country": "GB", "city": "Slough",
+      "capacity_mw": 40, "pue": 1.48,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix FR5 Frankfurt",
+      "operator": "Equinix",
+      "lat": 50.0689, "lon": 8.6821,
+      "country": "DE", "city": "Frankfurt",
+      "capacity_mw": 25, "pue": 1.46,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix AM3 Amsterdam",
+      "operator": "Equinix",
+      "lat": 52.3076, "lon": 4.9411,
+      "country": "NL", "city": "Amsterdam",
+      "capacity_mw": 30, "pue": 1.44,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix SG3 Singapore",
+      "operator": "Equinix",
+      "lat": 1.2952, "lon": 103.8548,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 25, "pue": 1.55,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Equinix TY4 Tokyo",
+      "operator": "Equinix",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 20, "pue": 1.58,
+      "energy_source_pct_renewable": 96,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Digital Realty Ashburn",
+      "operator": "Digital Realty",
+      "lat": 39.0437, "lon": -77.4875,
+      "country": "US", "city": "Ashburn",
+      "capacity_mw": 120, "pue": 1.52,
+      "energy_source_pct_renewable": 75,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Digital Realty Amsterdam AMS1",
+      "operator": "Digital Realty",
+      "lat": 52.3676, "lon": 4.9041,
+      "country": "NL", "city": "Amsterdam",
+      "capacity_mw": 80, "pue": 1.50,
+      "energy_source_pct_renewable": 80,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Digital Realty Singapore",
+      "operator": "Digital Realty",
+      "lat": 1.3521, "lon": 103.8198,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 60, "pue": 1.55,
+      "energy_source_pct_renewable": 60,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Apple Maiden (NC)",
+      "operator": "Apple",
+      "lat": 35.5607, "lon": -81.2267,
+      "country": "US", "city": "Maiden",
+      "capacity_mw": 100, "pue": 1.20,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Apple Prineville (OR)",
+      "operator": "Apple",
+      "lat": 44.2998, "lon": -120.8346,
+      "country": "US", "city": "Prineville",
+      "capacity_mw": 120, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Apple Viborg",
+      "operator": "Apple",
+      "lat": 56.4506, "lon": 9.4016,
+      "country": "DK", "city": "Viborg",
+      "capacity_mw": 150, "pue": 1.12,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Alibaba Cloud Hangzhou",
+      "operator": "Alibaba",
+      "lat": 30.2741, "lon": 120.1551,
+      "country": "CN", "city": "Hangzhou",
+      "capacity_mw": 800, "pue": 1.30,
+      "energy_source_pct_renewable": 40,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Alibaba Cloud Beijing",
+      "operator": "Alibaba",
+      "lat": 39.9042, "lon": 116.4074,
+      "country": "CN", "city": "Beijing",
+      "capacity_mw": 600, "pue": 1.35,
+      "energy_source_pct_renewable": 35,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Tencent Cloud Guizhou",
+      "operator": "Tencent",
+      "lat": 26.6000, "lon": 106.7000,
+      "country": "CN", "city": "Guizhou",
+      "capacity_mw": 400, "pue": 1.25,
+      "energy_source_pct_renewable": 50,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Baidu Cloud Inner Mongolia",
+      "operator": "Baidu",
+      "lat": 41.7900, "lon": 112.2700,
+      "country": "CN", "city": "Ulanqab",
+      "capacity_mw": 500, "pue": 1.20,
+      "energy_source_pct_renewable": 45,
+      "operator_commitment_net_zero": "2035",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Yandex Moscow",
+      "operator": "Yandex",
+      "lat": 55.7558, "lon": 37.6173,
+      "country": "RU", "city": "Moscow",
+      "capacity_mw": 150, "pue": 1.40,
+      "energy_source_pct_renewable": 20,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Yandex Mäntsälä",
+      "operator": "Yandex",
+      "lat": 60.6356, "lon": 25.3200,
+      "country": "FI", "city": "Mäntsälä",
+      "capacity_mw": 100, "pue": 1.15,
+      "energy_source_pct_renewable": 90,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Hetzner Falkenstein",
+      "operator": "Hetzner",
+      "lat": 50.4779, "lon": 12.3714,
+      "country": "DE", "city": "Falkenstein",
+      "capacity_mw": 30, "pue": 1.35,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Hetzner Nuremberg",
+      "operator": "Hetzner",
+      "lat": 49.4521, "lon": 11.0767,
+      "country": "DE", "city": "Nuremberg",
+      "capacity_mw": 25, "pue": 1.38,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Hetzner Helsinki",
+      "operator": "Hetzner",
+      "lat": 60.1699, "lon": 24.9384,
+      "country": "FI", "city": "Helsinki",
+      "capacity_mw": 20, "pue": 1.25,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Scaleway Paris DC2",
+      "operator": "Scaleway",
+      "lat": 48.9258, "lon": 2.3605,
+      "country": "FR", "city": "Paris",
+      "capacity_mw": 15, "pue": 1.45,
+      "energy_source_pct_renewable": 90,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Scaleway Amsterdam AMS1",
+      "operator": "Scaleway",
+      "lat": 52.3676, "lon": 4.9041,
+      "country": "NL", "city": "Amsterdam",
+      "capacity_mw": 20, "pue": 1.40,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Scaleway Warsaw WAW1",
+      "operator": "Scaleway",
+      "lat": 52.2297, "lon": 21.0122,
+      "country": "PL", "city": "Warsaw",
+      "capacity_mw": 10, "pue": 1.50,
+      "energy_source_pct_renewable": 50,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "NIIF Budapest",
+      "operator": "NIIF",
+      "lat": 47.4979, "lon": 19.0402,
+      "country": "HU", "city": "Budapest",
+      "capacity_mw": 10, "pue": 1.60,
+      "energy_source_pct_renewable": 35,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "CyrusOne Dallas",
+      "operator": "CyrusOne",
+      "lat": 32.7767, "lon": -96.7970,
+      "country": "US", "city": "Dallas",
+      "capacity_mw": 200, "pue": 1.48,
+      "energy_source_pct_renewable": 60,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "CyrusOne Phoenix",
+      "operator": "CyrusOne",
+      "lat": 33.4484, "lon": -112.0740,
+      "country": "US", "city": "Phoenix",
+      "capacity_mw": 180, "pue": 1.55,
+      "energy_source_pct_renewable": 55,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "NTT Tokyo DC",
+      "operator": "NTT",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 180, "pue": 1.45,
+      "energy_source_pct_renewable": 30,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "SoftBank Tokyo",
+      "operator": "SoftBank",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 100, "pue": 1.50,
+      "energy_source_pct_renewable": 25,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "KDDI Tokyo",
+      "operator": "KDDI",
+      "lat": 35.6762, "lon": 139.6503,
+      "country": "JP", "city": "Tokyo",
+      "capacity_mw": 80, "pue": 1.52,
+      "energy_source_pct_renewable": 30,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "TCIL Mumbai Tier IV",
+      "operator": "TCIL",
+      "lat": 19.0760, "lon": 72.8777,
+      "country": "IN", "city": "Mumbai",
+      "capacity_mw": 50, "pue": 1.70,
+      "energy_source_pct_renewable": 20,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Navisite Boston",
+      "operator": "Navisite",
+      "lat": 42.3601, "lon": -71.0589,
+      "country": "US", "city": "Boston",
+      "capacity_mw": 30, "pue": 1.60,
+      "energy_source_pct_renewable": 50,
+      "operator_commitment_net_zero": "2035",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Interxion MAD2 Madrid",
+      "operator": "Interxion",
+      "lat": 40.4168, "lon": -3.7038,
+      "country": "ES", "city": "Madrid",
+      "capacity_mw": 35, "pue": 1.48,
+      "energy_source_pct_renewable": 70,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Interxion MRS2 Marseille",
+      "operator": "Interxion",
+      "lat": 43.2965, "lon": 5.3698,
+      "country": "FR", "city": "Marseille",
+      "capacity_mw": 20, "pue": 1.45,
+      "energy_source_pct_renewable": 75,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Interxion CPH2 Copenhagen",
+      "operator": "Interxion",
+      "lat": 55.6761, "lon": 12.5683,
+      "country": "DK", "city": "Copenhagen",
+      "capacity_mw": 25, "pue": 1.35,
+      "energy_source_pct_renewable": 95,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Global Switch London",
+      "operator": "Global Switch",
+      "lat": 51.5074, "lon": -0.1278,
+      "country": "GB", "city": "London",
+      "capacity_mw": 45, "pue": 1.50,
+      "energy_source_pct_renewable": 80,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Global Switch Singapore",
+      "operator": "Global Switch",
+      "lat": 1.3521, "lon": 103.8198,
+      "country": "SG", "city": "Singapore",
+      "capacity_mw": 40, "pue": 1.58,
+      "energy_source_pct_renewable": 55,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Telehouse London LDNHE",
+      "operator": "Telehouse",
+      "lat": 51.5074, "lon": -0.0278,
+      "country": "GB", "city": "London",
+      "capacity_mw": 55, "pue": 1.52,
+      "energy_source_pct_renewable": 85,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Nabiax MAD Alcobendas",
+      "operator": "Nabiax",
+      "lat": 40.5333, "lon": -3.6333,
+      "country": "ES", "city": "Alcobendas",
+      "capacity_mw": 30, "pue": 1.50,
+      "energy_source_pct_renewable": 65,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "TierPoint Chicago",
+      "operator": "TierPoint",
+      "lat": 41.8781, "lon": -87.6298,
+      "country": "US", "city": "Chicago",
+      "capacity_mw": 50, "pue": 1.55,
+      "energy_source_pct_renewable": 55,
+      "operator_commitment_net_zero": "2035",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "QTS Atlanta",
+      "operator": "QTS",
+      "lat": 33.7490, "lon": -84.3880,
+      "country": "US", "city": "Atlanta",
+      "capacity_mw": 80, "pue": 1.50,
+      "energy_source_pct_renewable": 60,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Iron Mountain Boston",
+      "operator": "Iron Mountain",
+      "lat": 42.3601, "lon": -71.0589,
+      "country": "US", "city": "Boston",
+      "capacity_mw": 25, "pue": 1.58,
+      "energy_source_pct_renewable": 65,
+      "operator_commitment_net_zero": "2040",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Switch SuperNAP Las Vegas",
+      "operator": "Switch",
+      "lat": 36.1699, "lon": -115.1398,
+      "country": "US", "city": "Las Vegas",
+      "capacity_mw": 650, "pue": 1.18,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "Switch PRIME Campus Reno",
+      "operator": "Switch",
+      "lat": 39.5296, "lon": -119.8138,
+      "country": "US", "city": "Reno",
+      "capacity_mw": 600, "pue": 1.16,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "verified"
+    },
+    {
+      "name": "CoreSite Denver",
+      "operator": "CoreSite",
+      "lat": 39.7392, "lon": -104.9903,
+      "country": "US", "city": "Denver",
+      "capacity_mw": 60, "pue": 1.48,
+      "energy_source_pct_renewable": 70,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "Cologix Montreal",
+      "operator": "Cologix",
+      "lat": 45.5017, "lon": -73.5673,
+      "country": "CA", "city": "Montréal",
+      "capacity_mw": 40, "pue": 1.35,
+      "energy_source_pct_renewable": 100,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "STACK Infrastructure Denver",
+      "operator": "STACK Infrastructure",
+      "lat": 39.7392, "lon": -104.9903,
+      "country": "US", "city": "Denver",
+      "capacity_mw": 90, "pue": 1.45,
+      "energy_source_pct_renewable": 75,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    },
+    {
+      "name": "DataBank Chicago",
+      "operator": "DataBank",
+      "lat": 41.8781, "lon": -87.6298,
+      "country": "US", "city": "Chicago",
+      "capacity_mw": 35, "pue": 1.55,
+      "energy_source_pct_renewable": 60,
+      "operator_commitment_net_zero": "2030",
+      "data_quality": "estimated"
+    }
+  ]
+}
